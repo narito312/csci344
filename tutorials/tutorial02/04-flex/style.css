@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#home{
+    background-color: blue;
+}
+
+#bio{
+    background-color: green;
+}
+
+#portfolio{
+    background-color: purple;
+}
+
+#contact{
+    background-color: lightblue;
+}
+
+section h2{
+    margin-bottom: 10px;
+}
+
+section h1{
+    max-width: 600px;
+}
