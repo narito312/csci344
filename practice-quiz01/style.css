@@ -1,0 +1,38 @@
+body{
+    background-color: #F0F4EF;
+}
+
+header{
+    background-color: #b4cded;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Impact', sans-serif;
+}
+
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    color: white;
+    font-weight: bold;
+
+}
+
+#images{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+images img{
+    width: 30px;
+}
+
+footer{
+    background-color: #344966;
+    color: white;
+}
