@@ -1,5 +1,5 @@
 
-function changeColor(action, selector, color){
+function changeStyle(action, selector, color){
     console.log(selector, color);
     const el = document.querySelector(selector);
     if(action === "change"){
