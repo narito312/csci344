@@ -15,9 +15,9 @@ const search = (ev) => {
 };
 
 // Part 1.1a
-const isClassFull = (course) => {
+const isClassOpen = (course) => {
     // modify this to accurately apply the filter:
-    return course.EnrollmentMax <= course.EnrollmentCurrent;
+    return course.EnrollmentMax > course.EnrollmentCurrent;
 };
 
 // Part 1.1b
@@ -37,25 +37,30 @@ const doesTermMatch = (course) => {
 
 // Part 1.2
 const dataToHTML = (course) => {
-    const isOpen = course.EnrollmentCurrent < course.EnrollmentMax;
     // modify this to be more detailed
     let status;
-    if(isClassFull(course)){
+    let seatsAvailable = course.EnrollmentMax - course.EnrollmentCurrent;
+
+    if(!isClassOpen(course)){
         status = '<i class= "fa-circle-check fa-circle-xmark"}"></i> Closed' 
     }else{
         status = '<i class= "fa-circle-check fa-circle-check"}"></i> Open' 
+    }
+
+    if(seatsAvailable < 0){
+        seatsAvailable = 0;
     }
 
     return `
         <section class="course">
             <h2>${course.Title}: (${course.Code})</h2>
             <p>
-                <${status} &bull;10498 &bull; Number on Waitlist 0
+                <${status} &bull;${course.CRN} &bull; Seats Available: ${seatsAvailable};
             </p>
             <p>
-                MWF &bull;  ZEI 201 &bull; 3 credit hour(s)
+                ${course.Days || "TBD"} &bull;  ${course.Location.FullLocation || "TBD"} &bull; ${course.Hours} credit hour(s)
             </p>
-            <p><strong>Sarris, Michael</strong></p>
+            <p><strong>${course.Instructors[0].Name}</strong></p>
             
         </section>
     `;
@@ -74,14 +79,12 @@ const showMatchingCourses = () => {
     container.innerHTML = null;
 
     //filter by search term: 
-    let matches = courseList;
+    let matches = matches.filter(doesTermMatch);
+    matches = matches.filter(isClassOpen);
 
     if (openOnly) {
         matches = matches.filter(isClassFull);
     }
-
-
-    matches = matches.filter(doesTermMatch);
     
     matches.forEach(course => {
         const snippet = dataToHTML(course);
