@@ -104,3 +104,5 @@ const statuses = [
  *   4. create a function that returns the total number of retweets 
  *      (across all of the statuses in the list) (use reduce).
  */
+
+statuses.map(statuses.filter())
