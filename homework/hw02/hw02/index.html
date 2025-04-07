@@ -5,66 +5,355 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>HW02 Starter Code</title>
+    <title>Photo App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navigation (Fixed) -->
-    <header class = 'top-nav'>
-        <h1 class="logo">
-            Photo App
-        </h1>
-        <nav class = "actions">
+
+    <!-- Navigation Bar -->
+    <header class="top-nav">
+        <h1 class="logo">Photo App</h1>
+        <nav class="actions">
             <span class="username">Username</span>
             <button class="logout">Logout</button>
         </nav>
     </header>
 
-        <!-- Right Panel (Fixed) -->
-        <aside class="suggestions-panel">
-            <div clas = "user-profile">
-                <img src="https://picsum.photos/50" alt="User Profile" class="profile-pic">
-                <div class = "info">
-                    <span class = "username"> Current User</span>
-                </div> 
+    <!-- Suggestions Panel -->
+    <aside class="suggestions-panel">
+        <div class="user-profile">
+            <img src="https://picsum.photos/50" alt="User Profile" class="profile-pic">
+            <div class="info">
+                <span class="username">Current User</span>
             </div>
-            <p class="suggestions-title">Suggestions for you</p>
-            <div class = "suggestions-list">
-                <div class = "suggestion">
-                    <img src="https://picsum.photos/50" alt="User 1" class="profile-pic">
-                    <div class="suggestion-info">
-                        <span class = "suggestion-username">User1</span>
-                        <p class = "suggested-text">Suggested for you</p>
-                    </div>
-
-                    
+        </div>
+        <p class="suggestions-title">Suggestions for you</p>
+        <div class="suggestions-list">
+            <!-- Suggestion 1 -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/51" alt="User 1" class="profile-pic">
+                <div class="suggestion-info">
+                    <span class="suggestion-username">User1</span>
+                    <p class="suggested-text">Suggested for you</p>
                 </div>
+                <a href="#" class="follow-link">Follow</a>
             </div>
-        </aside>
 
-        <!-- Main Panel-->
+            <!-- Suggestion 2 -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/52" alt="User 2" class="profile-pic">
+                <div class="suggestion-info">
+                    <span class="suggestion-username">User2</span>
+                    <p class="suggested-text">Suggested for you</p>
+                </div>
+                <a href="#" class="follow-link">Follow</a>
+            </div>
+
+            <!-- Suggestion 3 -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/53" alt="User 3" class="profile-pic">
+                <div class="suggestion-info">
+                    <span class="suggestion-username">User3</span>
+                    <p class="suggested-text">Suggested for you</p>
+                </div>
+                <a href="#" class="follow-link">Follow</a>
+            </div>
+
+            <!-- Suggestion 4 -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/54" alt="User 4" class="profile-pic">
+                <div class="suggestion-info">
+                    <span class="suggestion-username">User4</span>
+                    <p class="suggested-text">Suggested for you</p>
+                </div>
+                <a href="#" class="follow-link">Follow</a>
+            </div>
+
+            <!-- Suggestion 5 -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/55" alt="User 5" class="profile-pic">
+                <div class="suggestion-info">
+                    <span class="suggestion-username">User5</span>
+                    <p class="suggested-text">Suggested for you</p>
+                </div>
+                <a href="#" class="follow-link">Follow</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Feed -->
     <main>
         <section class="news-feed">
-            <!-- Stories -->
-            <header class ="stories">
-                Stories Panel
+
+            <!-- Stories Panel -->
+            <header class="stories">
+                <div class="story">
+                    <img src="https://picsum.photos/60?1" class="story-pic" alt="story 1">
+                    <p class="story-username">User1</p>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/60?2" class="story-pic" alt="story 2">
+                    <p class="story-username">User2</p>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/60?3" class="story-pic" alt="story 3">
+                    <p class="story-username">User3</p>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/60?4" class="story-pic" alt="story 4">
+                    <p class="story-username">User4</p>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/60?5" class="story-pic" alt="story 5">
+                    <p class="story-username">User5</p>
+                </div>
             </header>
+
             <section class="post">
-                <!-- Posts -->
-                Post 1
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
             </section>
+            
             <section class="post">
-                Post 2
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
             </section>
-            <section class ="post">
-                Post 3
+
+            <section class="post">
+
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
             </section>
-            <section class ="post">
-                Post 4
+
+            <section class="post">
+
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
             </section>
+
+            <section class="post">
+
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
+            </section>
+
+            <section class="post">
+
+                <div class="post-header">
+                    <span class="post-username">creator_username</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <img src="https://picsum.photos/600/400?random=101" alt="Post image" class="post-image">
+
+                <div class="post-actions">
+                    <div class="left-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <p class="likes"><strong>123 likes</strong></p>
+
+                <div class="caption">
+                    <span class="caption-username"><strong>creator_username</strong></span>
+                    <span class="caption-text">This is the caption for the photo...</span>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <div class="comments">
+                    <p><strong>commenter1</strong> Nice shot!</p>
+                    <p><strong>commenter2</strong> Love this!</p>
+                </div>
+
+                <div class="add-comment">
+                    <i class="far fa-smile emoji"></i>
+                    <input type="text" placeholder="Add a comment..." class="comment-input">
+                    <a href="#" class="post-comment">Post</a>
+                </div>
+            </section>
+
         </section>
     </main>
-</body>
 
+</body>
 </html>
